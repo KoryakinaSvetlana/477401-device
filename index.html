@@ -7,10 +7,14 @@
 <body>
   <header class="main-header">
     <div class="logo">
-      <a>Device</a>
+      <a>
+        <img src="img/logo.svg">
+      </a>
     </div>
     <div class="search">
-      Поиск по сайту
+      <label for="search-text" class="visually-hidden">Поиск по сайту</label>
+      <input type="text" class="search-field" id="search-text" placeholder="Поиск по сайту">
+      <button class="search-button">Найти</button>
     </div>
     <!--пользовательское меню-->
     <ul class="user-navigation">
@@ -45,104 +49,105 @@
 
     <section class="sliders">
       <h2 class="visually-hidden">Популярные товары</h2>
-
-
-      <div class="slider-item active">
-        <div class="slider-numer">01</div>
-        <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи" />
-        <p>
-          Делай селфи,
-          как Бен Стиллер!
-        </p>
-        <p>
-          Самая длинная палка для селфи доступна в нашем магазине.
-          Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-        </p>
-
-        <table>
-          <tr>
-            <td>8.5 м</td>
-            <td>5 кг</td>
-            <td>Карбон</td>
-          </tr>
-          <tr>
-            <th>Длина палки</th>
-            <th>Вес палки</th>
-            <th>Материал</th>
-          </tr>
-        </table>
-
-        <a href="#">Подробнее</a>
-
+      <!--Переключатель слайдов-->
+      <input type="radio" id="btn-1" name="toggle" checked>
+      <input type="radio" id="btn-2" name="toggle">
+      <input type="radio" id="btn-3" name="toggle">
+      <div class="slider-controls">
+        <label for="btn-1"></label>
+        <label for="btn-2"></label>
+        <label for="btn-3"></label>
       </div>
 
-      <div class="slider-item">
-        <div class="slider-numer">02</div>
-        <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
-        <p>
-          Худеем
-          правильно!
-        </p>
-        <p>
-          Мотивирующие фитнес-браслеты помогут найти в себе силы
-          не пропускать занятия и соблюдать диету.
-        </p>
-        <table>
-          <tr>
-            <td>
-              48 часов
-            </td>
-          </tr>
-          <tr>
-            <th>
-              Без подзарядки
-            </th>
-          </tr>
-        </table>
+      <div class="slider-inner">
+        <!--Первый слайд-->
+        <div class="slider-item active">
+          <h3 class="slider-numer">Первый слайд</h3>
+          <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи" />
+          <p>
+            Делай селфи,
+            как Бен Стиллер!
+          </p>
+          <p>
+            Самая длинная палка для селфи доступна в нашем магазине.
+            Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+          </p>
+          <table>
+            <tr>
+              <td>8.5 м</td>
+              <td>5 кг</td>
+              <td>Карбон</td>
+            </tr>
+            <tr>
+              <th>Длина палки</th>
+              <th>Вес палки</th>
+              <th>Материал</th>
+            </tr>
+          </table>
+          <a href="#">Подробнее</a>
+        </div>
 
-        <a href="#">Подробнее</a>
+        <!--Второй слайд-->
+        <div class="slider-item">
+          <h3 class="slider-numer">Второй слайд</h3>
+          <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
+          <p>
+            Худеем
+            правильно!
+          </p>
+          <p>
+            Мотивирующие фитнес-браслеты помогут найти в себе силы
+            не пропускать занятия и соблюдать диету.
+          </p>
+          <table>
+            <tr>
+              <td>
+                48 часов
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Без подзарядки
+              </th>
+            </tr>
+          </table>
+          <a href="#">Подробнее</a>
+        </div>
 
+        <!--Третий слайд-->
+        <div class="slider-item">
+          <h3 class="slider-numer">Третий слайд</h3>
+          <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+          <p>
+            Порхает как бабочка,
+            жалит как пчела!
+          </p>
+          <p>
+            Этот обычный, на первый взгляд, квадрокоптер оснащен
+            мощным лазером, замаскированным под стандартную камеру.
+          </p>
+          <table>
+            <tr>
+              <td>
+                800 м
+              </td>
+              <td>
+                50 м
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Дальность полета
+              </th>
+              <th>
+                Радиус поражения
+              </th>
+            </tr>
+          </table>
+          <a href="#">Подробнее</a>
+        </div>
       </div>
-      <div class="slider-item">
-        <div class="slider-numer">03</div>
-        <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
-        <p>
-          Порхает как бабочка,
-          жалит как пчела!
-        </p>
-        <p>
-          Этот обычный, на первый взгляд, квадрокоптер оснащен
-          мощным лазером, замаскированным под стандартную камеру.
-        </p>
 
-        <table>
-          <tr>
-            <td>
-              800 м
-            </td>
-            <td>
-              50 м
-            </td>
-          </tr>
-          <tr>
-            <th>
-              Дальность полета
-            </th>
-            <th>
-              Радиус поражения
-            </th>
-          </tr>
-        </table>
-
-        <a href="#">Подробнее</a>
-
-      </div>
-      <!--Переключатель для слайдов-->
-      <ul class="slider-switcher">
-        <li class="slider-switcher-button active"><a>1</a></li>
-        <li class="slider-switcher-button"><a href="#">2</a></li>
-        <li class="slider-switcher-button"><a href="#">3</a></li>
-      </ul>
     </section>
     <!--каталог товаров-->
     <section class="categories">
@@ -291,7 +296,9 @@
   </main>
   <footer class="main-footer">
     <div class="logo yellow">
-      <a>Device</a>
+      <a>
+        <img src="img/logo-yellow.svg">
+      </a>
     </div>
     <!--пользовательское меню-->
     <ul class="user_menu">
@@ -328,14 +335,28 @@
 
   <!--Окно обратной связи-->
   <section class="modal modal-feedback">
-    <!-- Здесь будет форма -->
-    <span class="modal-close">x</span>
+    <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="get">
+      <p>
+        <label for="user">Ваше имя:</label>
+        <input class="modal-feedback-form-user" id="user" type="text" name="user" placeholder="Представьтесь, пожалуйста">
+      </p>
+      <p>
+        <label for="email">Ваш e-mail:</label>
+        <input class="modal-feedback-form-email" id="email" type="text" name="email" placeholder="Для отправки ответа">
+      </p>
+      <p class="login-password-info">
+        <label for="message">Текст письма:</label>
+        <textarea id="message" name="message" rows="5" cols="50" placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="button" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close">Закрыть</button>
   </section>
 
   <!--Карта-->
   <section class="modal modal-map">
     <img src="img/map-big.jpg" alt="Карта">
-    <span class="modal-close">x</span>
+    <button class="modal-close">Закрыть</button>
   </section>
 </body>
 </html>
