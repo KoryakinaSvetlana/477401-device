@@ -54,7 +54,7 @@ body {
   width: 20px;
   height: 20px;
 
-  background-image: url('/img/search.svg');
+  background-image: url('../img/search.svg');
   background-repeat: no-repeat;
   background-position: left center;
 }
@@ -378,15 +378,15 @@ body {
 }
 
 .service-item:first-of-type {
-  background-image: url('/img/delivery.svg');
+  background-image: url('../img/delivery.svg');
 }
 
 .service-item:nth-of-type(2) {
-  background-image: url('/img/warranty.svg');
+  background-image: url('../img/warranty.svg');
 }
 
 .service-item:last-of-type {
-  background-image: url('/img/credit.svg');
+  background-image: url('../img/credit.svg');
 }
 
 .clients ul {
@@ -683,15 +683,15 @@ body {
 }
 
 .footer-social li:first-of-type a::before {
-  background-image: url('/img/fb.svg');
+  background-image: url('../img/fb.svg');
 }
 
 .footer-social li:nth-of-type(2) a::before {
-  background-image: url('/img/instagram.svg');
+  background-image: url('../img/instagram.svg');
 }
 
 .footer-social li:nth-of-type(3) a::before {
-  background-image: url('/img/twitter.svg');
+  background-image: url('../img/twitter.svg');
 }
 
 .social-button:hover::before {
@@ -709,7 +709,7 @@ body {
   height: 35px;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url('/img/logo-html.svg');
+  background-image: url('../img/logo-html.svg');
 }
 
 .footer-copyright a:hover {
@@ -802,7 +802,7 @@ body {
   width: 55px;
   height: 55px;
 
-  background-image: url('/img/modal-close.svg');
+  background-image: url('../img/modal-close.svg');
   background-position: center;
   background-repeat: no-repeat;
 }
