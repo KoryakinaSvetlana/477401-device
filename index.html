@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Девайс</title>
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
   <header class="main-header">
@@ -19,23 +21,23 @@
     <!--пользовательское меню-->
     <ul class="user-navigation">
       <li>
-        <a href="#" class="login">Вход</a>
+        <a class="login" href="#">Вход</a>
       </li>
     </ul>
-    <a href="#" class="compare">Сравнить</a>
-    <a href="#" class="basket">Корзина</a>
+    <a class="compare" href="#">Сравнить</a>
+    <a class="basket" href="#">Корзина</a>
     <!--главное меню-->
     <nav class="main-navigation">
       <ul>
         <li>
           <a href="#">Каталог товаров</a>
-          <ul class="visually-hidden">
+          <ul class="popup-menu">
             <li><a href="#">Виртуальная реальность</a></li>
             <li><a href="#">Фитнес-браслеты</a></li>
             <li><a href="#">Квадрокоптеры</a>
             <li><a href="catalog.html">Моноподы для селфи</a></li>
             <li><a href="#">Умные часы</a></li>
-            <li><a href="#">Экшн камеры</a>
+            <li><a href="#">Экшн камеры</a></li>
           </ul>
         </li>
         <li><a href="#">Доставка</a></li>
@@ -85,7 +87,7 @@
               <th>Материал</th>
             </tr>
           </table>
-          <a href="#">Подробнее</a>
+          <a href="#" class="btn">Подробнее</a>
         </div>
 
         <!--Второй слайд-->
@@ -113,7 +115,7 @@
               </th>
             </tr>
           </table>
-          <a href="#">Подробнее</a>
+          <a href="#" class="btn">Подробнее</a>
         </div>
 
         <!--Третий слайд-->
@@ -147,7 +149,7 @@
               </th>
             </tr>
           </table>
-          <a href="#">Подробнее</a>
+          <a href="#" class="btn">Подробнее</a>
         </div>
       </div>
 
@@ -214,11 +216,10 @@
         <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
       </div>
       <div class="service-item">
-        <h3>Гарантии</h3>
+        <h3>Гарантия</h3>
         <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
       Товар, не дом, конечно же.</p>
       </div>
-      
       <div class="service-item">
         <h3>Кредит</h3>
         <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
@@ -227,13 +228,13 @@
       <!--Переключатель для сервисов-->
       <ul class="service-navigation">
         <li>
-          <a class="active">Доставка</a>
+          <a class="btn active">Доставка</a>
         </li>
         <li>
-          <a href="#">Гарантии</a>
+          <a class="btn" href="#">Гарантии</a>
         </li>
         <li>
-          <a href="#">Кредит</a>
+          <a class="btn" href="#">Кредит</a>
         </li>
       </ul>
 
@@ -245,21 +246,25 @@
         <li class="client-item">
           <a href="#">
             <img src="img/logo-1.jpg" width="260" height="100" alt="dji">
+            <img src="img/logo-color-1.jpg" width="260" height="100" alt="dji">
           </a>
         </li>
         <li class="client-item">
           <a href="#">
             <img src="img/logo-2.jpg" width="260" height="100" alt="SP Gadgets">
+            <img src="img/logo-color-2.jpg" width="260" height="100" alt="SP Gadgets">
           </a>
         </li>
         <li class="client-item">
           <a href="#">
             <img src="img/logo-3.jpg" width="260" height="100" alt="GoPro">
+            <img src="img/logo-color-3.jpg" width="260" height="100" alt="GoPro">
           </a>
         </li>
         <li class="client-item">
           <a href="#">
             <img src="img/logo-4.jpg" width="260" height="100" alt="vive">
+            <img src="img/logo-color-4.jpg" width="260" height="100" alt="vive">
           </a>
         </li>
       </ul>
@@ -281,14 +286,14 @@
         <li>ЖелДорЭкспедиция</li>
       </ul>
 
-      <a href="#">Подробнее о нас</a>
+      <a class="btn" href="#">Подробнее о нас</a>
     </section>
 
     <section class="contact">
       <h2>Контакты</h2>
 
       <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-      <a href="contacts.html" class="btn btn-open-form">
+      <a href="contacts.html">
         <img src="img/map.jpg" alt="Карта">
       </a>
 
@@ -305,14 +310,14 @@
     <!--пользовательское меню-->
     <ul class="user_menu">
       <li>
-        <a href="#" class="login">Вход</a>
+        <a class="login yellow" href="#">Вход</a>
       </li>
     </ul>
 
-    <a href="#" class="compare">Сравнить</a>
-    <a href="#" class="basket">Корзина</a>
+    <a class="compare yellow" href="#">Сравнить</a>
+    <a class="basket yellow" href="#">Корзина</a>
     <!--меню-->
-    <ul>
+    <ul class="bottom-menu">
       <li><a href="#">Доставка</a></li>
       <li><a href="#">Гарантии</a></li>
       <li><a href="#">Контакты</a></li>
@@ -331,34 +336,38 @@
       </ul>
     </div>
     <p class="footer-copyright">
-      <a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">HTML Academy</span></a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">HTML Academy</span></a>
     </p>
   </footer>
 
   <!--Окно обратной связи-->
   <section class="modal modal-feedback">
     <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="get">
-      <p>
+      <p class="modal-field">
         <label for="user">Ваше имя:</label>
         <input class="modal-feedback-form-user" id="user" type="text" name="user" placeholder="Представьтесь, пожалуйста">
       </p>
-      <p>
+      <p class="modal-field">
         <label for="email">Ваш e-mail:</label>
-        <input class="modal-feedback-form-email" id="email" type="text" name="email" placeholder="Для отправки ответа">
+        <input class="modal-feedback-form-email" id="email" type="text" name="email" placeholder="Для отправки ответа" required>
       </p>
-      <p class="login-password-info">
+      <p class="modal-field">
         <label for="message">Текст письма:</label>
         <textarea id="message" name="message" rows="5" cols="50" placeholder="В свободной форме"></textarea>
       </p>
-      <button class="button" type="submit">Отправить</button>
+      <button class="btn" type="submit">Отправить</button>
     </form>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
   </section>
 
   <!--Карта-->
   <section class="modal modal-map">
     <img src="img/map-big.jpg" alt="Карта">
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
   </section>
 </body>
 </html>

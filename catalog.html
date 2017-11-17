@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Девайс. Каталог</title>
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
   <header class="main-header">
@@ -19,10 +21,10 @@
     <!--пользовательское меню-->
     <ul class="user-navigation">
       <li>
-        <a href="#">Валентин Петухов</a>
+        <a class="login" href="#">Валентин Петухов</a>
       </li>
       <li>
-        <a href="#" class="logout">Выход</a>
+        <a class="logout" href="#">Выход</a>
       </li>
     </ul>
     <a href="#" class="compare">Сравнить</a>
@@ -32,7 +34,7 @@
       <ul>
         <li>
           <a href="#">Каталог товаров</a>
-          <ul class="visually-hidden">
+          <ul class="popup-menu">
             <li><a href="#">Виртуальная реальность</a></li>
             <li><a href="#">Фитнес-браслеты</a></li>
             <li><a href="#">Квадрокоптеры</a>
@@ -48,16 +50,18 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main-content">
     <h1>Моноподы для селфи</h1>
     <ul class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
       <li><a href="#">Каталог товаров</a></li>
-      <li class="breadcrumbs active">Моноподы для селфи</li>
+      <li><span class="active">Моноподы для селфи</span></li>
     </ul>
     <section class="filters">
-      <h2>Фильтр:</h2>
-      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+      <div class="filters-wrapper">
+        <h2>Фильтр:</h2>
+      </div>
+      <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend>Стоимость</legend>
           <div class="range">
@@ -71,11 +75,11 @@
             <div class="range-text">
               <div class="price-start">
                 <label for="min-price" class="visually-hidden">от</label>
-                <input type="text" id="min-price" name="min-price" value="0">
+                <input type="text" id="min-price" name="min-price" value="0" readonly>
               </div>
               <div class="price-end">
                 <label for="max-price" class="visually-hidden">до</label>
-                <input type="text" id="max-price" name="max-price" value="5000">
+                <input type="text" id="max-price" name="max-price" value="5000" readonly>
               </div>
             </div>
           </div>
@@ -118,17 +122,17 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="btn" type="submit">Показать</button>
       </form>
     </section>
 
     <section class="catalog">
       <h2 class="visually-hidden">Каталог:</h2>
       <div class="toolbar">
-        <span>Сортировка:</span>
+        <span class="toolbar-header">Сортировка:</span>
         <ul class="sort-field">
           <li>
-            <a>По цене</a>
+            <a class="active">По цене</a>
           </li>
           <li>
             <a href="#">По типу</a>
@@ -138,12 +142,12 @@
           </li>
         </ul>
 
-        <ul>
+        <ul class="sort-direction">
           <li>
-            <a>По возрастанию</a>
+            <a><span class="visually-hidden">По возрастанию</span></a>
           </li>
           <li>
-            <a href="#">По убыванию</a>
+            <a href="#"><span class="visually-hidden">По убыванию</span></a>
           </li>
         </ul>
       </div>
@@ -152,40 +156,40 @@
         <li class="catalog-item">
           <h3>Любительская селфи-палка</h3>
           <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-          <p>500 руб.</p>
-          <a class="button" href="#">В корзину</a>
-          <a class="button" href="#">Сравнить</a>
+          <p class="price">500 руб.</p>
+          <a class="btn" href="#">В корзину</a>
+          <a class="item-compare" href="#">Добавить к сравнению</a>
         </li>
 
         <li class="catalog-item">
           <h3>Профессиональная селфи-палка</h3>
           <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-          <p>1500 руб.</p>
-          <a class="button" href="#">В корзину</a>
-          <a class="button" href="#">Сравнить</a>
+          <p class="price">1500 руб.</p>
+          <a class="btn" href="#">В корзину</a>
+          <a class="item-compare" href="#">Добавить к сравнению</a>
         </li>
 
         <li class="catalog-item">
           <h3>Непотопляемая селфи-палка</h3>
           <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-          <p>2500 руб.</p>
-          <a class="button" href="#">В корзину</a>
-          <a class="button" href="#">Сравнить</a>
+          <p class="price">2500 руб.</p>
+          <a class="btn" href="#">В корзину</a>
+          <a class="item-compare" href="#">Добавить к сравнению</a>
         </li>
 
         <li class="catalog-item new">
           <h3>Селфи-палка "Следуй за мной"</h3>
           <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка (Следуй за мной)">
-          <p>4900 руб.</p>
-          <a class="button" href="#">В корзину</a>
-          <a class="button" href="#">Сравнить</a>
+          <p class="price">4900 руб.</p>
+          <a class="btn" href="#">В корзину</a>
+          <a class="item-compare" href="#">Добавить к сравнению</a>
         </li>
 
       </ul>
 
       <ul class="pagination-list">
-        <li class="pagination-item"><a href="#">Назад</a></li>
-        <li class="pagination-item pagination-item-current"><a>1</a></li>
+        <li class="pagination-item disabled"><a>Назад</a></li>
+        <li class="pagination-item current"><a>1</a></li>
         <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
         <li class="pagination-item"><a href="#">Вперед</a></li>
@@ -203,17 +207,17 @@
     <!--пользовательское меню-->
     <ul class="user-navigation">
       <li>
-        <a href="#">Валентин Петухов</a>
+        <a class="login yellow" href="#">Валентин Петухов</a>
       </li>
       <li>
-        <a href="#" class="logout">Выход</a>
+        <a class="logout" href="#">Выход</a>
       </li>
     </ul>
 
-    <a href="#" class="compare">Сравнить</a>
-    <a href="#" class="basket">Корзина</a>
+    <a class="compare yellow" href="#">Сравнить</a>
+    <a class="basket yellow" href="#">Корзина</a>
     <!--меню-->
-    <ul>
+    <ul class="bottom-menu">
       <li><a href="#">Доставка</a></li>
       <li><a href="#">Гарантии</a></li>
       <li><a href="#">Контакты</a></li>
