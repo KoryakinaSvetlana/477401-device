@@ -17,24 +17,27 @@
     var creditBtn = document.querySelector("#creditBtn");
 
     function removeActiveClass() {
+        var i = 0;
         var items = document.querySelectorAll(".service-navigation li");
-        items.forEach(function (item, i, arr) {
-            item.classList.remove("active");
-        })
+        for (i = 0; i < items.length; i++) {
+            items[i].classList.remove("active");
+        }
     }
 
     function hideSliders() {
+        var i = 0;
         var items = document.querySelectorAll(".slider-item");
-        items.forEach(function (item, i, arr) {
-            item.classList.remove("active");
-        })
+        for (i = 0; i < items.length; i++) {
+            items[i].classList.remove("active");
+        }
     }
 
     function hideServiceContents() {
+        var i = 0;
         var items = document.querySelectorAll(".service-item");
-        items.forEach(function (item, i, arr) {
-            item.classList.remove("active");
-        })
+        for (i = 0; i < items.length; i++) {
+            items[i].classList.remove("active");
+        }
     }
 
     window.addEventListener("keydown", function (event) {
