@@ -16,6 +16,11 @@
     var warrantyBtn = document.querySelector("#warrantyBtn");
     var creditBtn = document.querySelector("#creditBtn");
 
+    var form = writeusForm.querySelector("form");
+    var user = writeusForm.querySelector("#user");
+    var email = writeusForm.querySelector("#email");
+    var message = writeusForm.querySelector("#message");
+
     function removeActiveClass() {
         var i = 0;
         var items = document.querySelectorAll(".service-navigation li");
@@ -95,6 +100,9 @@
     closeWriteusForm.addEventListener("click", function (event) {
         event.preventDefault();
         writeusForm.classList.remove("modal-show");
+        user.classList.remove("invalid");
+        email.classList.remove("invalid");
+        message.classList.remove("invalid");
     });
 
     closeModalMap.addEventListener("click", function (event) {
@@ -104,11 +112,45 @@
 
     openWriteusForm.addEventListener("click", function (event) {
         event.preventDefault();
+        user.value = "";
+        email.value = "";
+        message.value = "";
         writeusForm.classList.add("modal-show");
+        user.focus();
     });
 
     openPopupMap.addEventListener("click", function (event) {
         event.preventDefault();
         modalMap.classList.add("modal-show");
+    });
+
+    user.addEventListener("keydown", function (event) {
+        user.classList.remove("invalid");
+    });
+
+    email.addEventListener("keydown", function (event) {
+        email.classList.remove("invalid");
+    });
+
+    message.addEventListener("keydown", function (event) {
+        message.classList.remove("invalid");
+    });
+
+    form.addEventListener("submit", function (event) {
+        if (!user.value || !email.value || !message.value) {
+            event.preventDefault();
+            user.classList.remove("invalid");
+            email.classList.remove("invalid");
+            message.classList.remove("invalid");
+            if (!user.value) {
+                user.classList.add("invalid");
+            }
+            if (!email.value) {
+                email.classList.add("invalid");
+            }
+            if (!message.value) {
+                message.classList.add("invalid");
+            }
+        }
     });
 };
