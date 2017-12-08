@@ -510,7 +510,7 @@ input[type="radio"].visually-hidden {
 /*css sliders*/
 .sliders .container {
   position: relative;
-  margin-bottom: 81px;
+  margin-bottom: 79px;
   background-image: -webkit-linear-gradient(top, #f7e296 110px, transparent 110px);
   background-image: -o-linear-gradient(top, #f7e296 110px, transparent 110px);
   background-image: linear-gradient(to bottom, #f7e296 110px, transparent 110px);
@@ -583,7 +583,7 @@ input[type="radio"].visually-hidden {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 560px;
-  min-height: 500px;
+  height: 500px;
 }
 
 .slider-item p {
@@ -593,6 +593,9 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.2px;
   line-height: 30px;
   color: #464646;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .slider-item .slider-header.slider-wide-header {
@@ -616,6 +619,8 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.47px;
   line-height: 56px;
   color: #000;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .slider-numer {
@@ -641,10 +646,12 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-item table {
-  margin-top: 33px;
-  margin-bottom: 22px;
+  margin-top: 53px;
+  margin-bottom: 25px;
   border-collapse: collapse;
   border-spacing: 0px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .slider-item table th {
